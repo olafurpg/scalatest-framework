@@ -1,6 +1,13 @@
 inThisBuild(List(
   scalaVersion := "2.12.10",
-  organization := "com.geirsson"
+  organization := "com.geirsson",
+  credentials += Credentials(
+  "GnuPG Key ID",
+  "gpg",
+  "7957CF210A706035C10F214962744880285183AC", // key identifier
+  "ignored" // this field is ignored; passwords are supplied by pinentry
+),
+useSuperShell := false
 ))
 skip in publish := true
 lazy val framework = project
