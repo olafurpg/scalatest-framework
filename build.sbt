@@ -2,6 +2,7 @@ inThisBuild(List(
   scalaVersion := "2.12.10",
   organization := "com.geirsson"
 ))
+skip in publish := true
 lazy val framework = project
   .settings(
     moduleName := "scalatest-framework",
