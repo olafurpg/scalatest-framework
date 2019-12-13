@@ -1,13 +1,17 @@
 inThisBuild(List(
   scalaVersion := "2.12.10",
   organization := "com.geirsson",
-  credentials += Credentials(
-  "GnuPG Key ID",
-  "gpg",
-  "7957CF210A706035C10F214962744880285183AC", // key identifier
-  "ignored" // this field is ignored; passwords are supplied by pinentry
-),
-useSuperShell := false
+  homepage := Some(url("https://github.com/olafurpg/scalatest-framework")),
+  licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+  developers := List(
+    Developer(
+      "olafurpg",
+      "Ólafur Páll Geirsson",
+      "olafurpg@gmail.com",
+      url("https://geirsson.com")
+    )
+  ),
+  useSuperShell := false
 ))
 skip in publish := true
 lazy val framework = project
